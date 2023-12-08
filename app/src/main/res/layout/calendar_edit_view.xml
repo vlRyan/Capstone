@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="15dp"
+    android:background="@color/background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_primary"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/what"
+                android:textAllCaps="true"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:textColor="@color/text"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/text"
+                android:ellipsize="end" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/when_"
+                android:textAllCaps="true"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/text"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textAllCaps="true"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:textColor="@color/text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where"
+                android:textAllCaps="true"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/where_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where_"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/adamina"
+                android:textSize="20sp"
+                android:textColor="@color/text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textSize="20sp"
+                android:fontFamily="@font/adamina"
+                android:layout_marginEnd="50dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button"/>
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="20sp"
+                android:fontFamily="@font/adamina"
+                android:textColor="@color/white"
+                android:background="@drawable/button"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

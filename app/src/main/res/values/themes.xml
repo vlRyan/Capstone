@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Capstone" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/nav</item>
+        <item name="colorPrimaryVariant">@color/nav</item>
+        <item name="android:statusBarColor">@color/nav</item>
+
+    </style>
+
+    <style name="Theme.Capstone" parent="Base.Theme.Capstone" />
+    
+    <style name="Base.Theme.Capstone.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

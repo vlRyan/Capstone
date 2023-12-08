@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard.dashboardEvents"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:textSize="15sp"
+        android:textColor="#FF0000"
+        android:background="#00FFFFFF"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="5dp"
+        android:src="@drawable/announcement1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/what"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/audiowide"
+            android:text="@string/what_"
+            android:textColor="@color/text"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/where"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Where"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/text"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/whenday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/text"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/whentime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/audiowide"
+            android:textColor="@color/text"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

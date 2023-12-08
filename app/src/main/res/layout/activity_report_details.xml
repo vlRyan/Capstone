@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReportDetails"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/reportTitleTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:fontFamily="@font/adamina"
+            android:layout_height="wrap_content"
+            android:text="@string/report_title"
+            android:textSize="25sp"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/reportDateTextView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date_"
+            android:fontFamily="@font/adamina"
+            android:textColor="@color/text"
+            android:textSize="25sp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/reportDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:fontFamily="@font/adamina"
+        android:textColor="@color/text"
+        android:text="@string/report_description"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/mediaImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/acceptButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/accept"
+            android:fontFamily="@font/adamina"
+            android:textColor="@color/white"
+            android:background="@color/accept"
+            android:layout_margin="5dp"/>
+
+
+        <Button
+            android:id="@+id/rejectButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/reject"
+            android:fontFamily="@font/adamina"
+            android:textColor="@color/white"
+            android:background="@color/reject"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

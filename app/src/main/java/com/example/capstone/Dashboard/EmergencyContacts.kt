@@ -10,8 +10,5 @@ class EmergencyContacts : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emergency_contacts)
 
-        val back = findViewById<Button>(R.id.back)
-
-        back.setOnClickListener { finish() }
     }
 }

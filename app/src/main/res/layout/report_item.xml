@@ -8,7 +8,7 @@
     android:layout_margin="8dp"
     android:id="@+id/reportContainer"
     app:cardCornerRadius="12dp"
-    android:backgroundTintMode="multiply">
+    app:elevation="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
 
             <TextView
                 android:id="@+id/dateTextView"
-                android:layout_width="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/date_"
                 android:textSize="15sp"

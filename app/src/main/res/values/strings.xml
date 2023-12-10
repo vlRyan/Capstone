@@ -104,6 +104,10 @@
     <string name="username">Username</string>
     <string name="sign_out">Sign Out</string>
     <string name="phone">Phone</string>
+    <string name="announcement">Announcement</string>
+    <string name="login">Login</string>
+    <string name="icom_con">ICom.Con</string>
+    <string name="signup">Sign Up</string>
     <string-array name="months">
         <item>Month</item>
         <item>January</item>

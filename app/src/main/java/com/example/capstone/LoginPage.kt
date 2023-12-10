@@ -30,10 +30,10 @@ class LoginPage : AppCompatActivity() {
     private lateinit var df: DocumentReference
     private lateinit var fStore: FirebaseFirestore
 
-
     companion object {
         const val ADMIN_EMAIL = "admin@email.com"
     }
+
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -94,11 +94,5 @@ class LoginPage : AppCompatActivity() {
             .addOnFailureListener {
                 Toast.makeText(this, "Authentication Failed ${it.localizedMessage}", Toast.LENGTH_SHORT).show()
             }
-
-
     }
-
-
-
-
 }

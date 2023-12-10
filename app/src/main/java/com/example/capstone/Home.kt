@@ -53,10 +53,6 @@ class Home : Fragment() {
         // Fetch reports from Firestore and update the adapter
         reportsCollection
             .whereEqualTo("status", "Accepted")
-            .orderBy(
-                "timestamp",
-                Query.Direction.DESCENDING
-            ) // Order by timestamp in descending order
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     Log.e("Firestore Error", e.message.toString())

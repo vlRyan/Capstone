@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.capstone.R
 
@@ -17,7 +18,7 @@ class dashboardEvents : AppCompatActivity() {
         val date: TextView = findViewById(R.id.whenday)
         val desc: TextView = findViewById(R.id.where)
         val time: TextView = findViewById(R.id.whentime)
-        val back: Button = findViewById(R.id.back)
+        val back: ImageView = findViewById(R.id.back)
 
         val bundle : Bundle?= intent.extras
         val titl = bundle?.getString("title")

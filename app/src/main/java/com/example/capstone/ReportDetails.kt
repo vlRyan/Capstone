@@ -20,13 +20,6 @@ class ReportDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report_details)
 
-        val backButton = findViewById<Button>(R.id.backBtn)
-        backButton.setOnClickListener {
-            val intent = Intent (this, navigation::class.java)
-            startActivity(intent)
-            finish()
-        }
-
         titleTextView = findViewById(R.id.reportTitleTextView)
         dateTextView = findViewById(R.id.reportDateTextView)
         descriptionTextView = findViewById(R.id.reportDescriptionTextView)

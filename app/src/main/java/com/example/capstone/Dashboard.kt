@@ -34,14 +34,11 @@ class dashboard : Fragment() {
     private lateinit var eventsArray: ArrayList<Events>
     private lateinit var dashboardAdapter: dashboardEventsAdapter
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
-
         val barangayOfficials: CardView = view.findViewById(R.id.officials)
         val contacts: CardView = view.findViewById(R.id.contacts)
         val FnB: CardView = view.findViewById(R.id.food)
@@ -74,23 +71,19 @@ class dashboard : Fragment() {
         }
 
         recyclerView = view.findViewById(R.id.currentEvents)
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.setHasFixedSize(true)
 
         eventsArray = arrayListOf()
         dashboardAdapter = dashboardEventsAdapter(eventsArray)
         recyclerView.adapter = dashboardAdapter
 
-
         EventChangeListener()
 
         return view
     }
 
-
     private fun EventChangeListener(){
-
-
         db = FirebaseFirestore.getInstance()
         db.collection("EventsAnnouncement").orderBy("eventDate", Query.Direction.ASCENDING)
             .addSnapshotListener(object : EventListener<QuerySnapshot> {
@@ -121,16 +114,11 @@ class dashboard : Fragment() {
                                 intent.putExtra("time", eventsArray[position].eventTime)
                                 startActivity(intent)
                             }
-
                         })
                     }
 
                     dashboardAdapter.notifyDataSetChanged()
                 }
-
-
             })
-
     }
-
 }

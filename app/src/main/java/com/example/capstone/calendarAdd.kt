@@ -57,8 +57,6 @@ class calendarAdd : AppCompatActivity() {
 
         val monthp = datePicker.month + 1
         val month = monthp.toString()
-
-
         val day = datePicker.dayOfMonth.toString()
         val year = datePicker.year.toString()
         val date = "$month/$day/$year"

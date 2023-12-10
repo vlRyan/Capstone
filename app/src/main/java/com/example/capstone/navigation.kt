@@ -1,5 +1,6 @@
 package com.example.capstone
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -77,6 +78,8 @@ class navigation : AppCompatActivity() {
                 }
                 R.id.logout -> {
                     Firebase.auth.signOut()
+                    val intent = Intent(this, LoginPage::class.java)
+                    startActivity(intent)
                     finish()
                     true
                 }

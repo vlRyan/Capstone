@@ -12,6 +12,7 @@ import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -64,13 +65,13 @@ class adminReservationView : Fragment() {
         }
 
 
-        val limit1 = view.findViewById<LinearLayout>(R.id.timeDisplay1)
-        val limit2 = view.findViewById<LinearLayout>(R.id.timeDisplay2)
-        val limit3 = view.findViewById<LinearLayout>(R.id.timeDisplay3)
-        val limit4 = view.findViewById<LinearLayout>(R.id.timeDisplay4)
-        val limit5 = view.findViewById<LinearLayout>(R.id.timeDisplay5)
-        val limit6 = view.findViewById<LinearLayout>(R.id.timeDisplay6)
-        val limit7 = view.findViewById<LinearLayout>(R.id.timeDisplay7)
+        val limit1 = view.findViewById<RelativeLayout>(R.id.timeDisplay1)
+        val limit2 = view.findViewById<RelativeLayout>(R.id.timeDisplay2)
+        val limit3 = view.findViewById<RelativeLayout>(R.id.timeDisplay3)
+        val limit4 = view.findViewById<RelativeLayout>(R.id.timeDisplay4)
+        val limit5 = view.findViewById<RelativeLayout>(R.id.timeDisplay5)
+        val limit6 = view.findViewById<RelativeLayout>(R.id.timeDisplay6)
+        val limit7 = view.findViewById<RelativeLayout>(R.id.timeDisplay7)
 
         limit1.setOnClickListener {
             navigateToAdminReservationViewItems("09:00 AM")
@@ -193,8 +194,8 @@ class adminReservationView : Fragment() {
         Log.d("AppointmentUpdate", "Updating limit text - ID: $limitId, Count: $count")
 
         if (limitTextView != null) {
-            limitTextView.text = "$count/20"
-            Log.d("AppointmentUpdate", "Limit ID: $limitId, Updated Count: $count/20")
+            limitTextView.text = "$count"
+            Log.d("AppointmentUpdate", "Limit ID: $limitId, Updated Count: $count")
 
             if (count > 20) {
                 // Delete the appointment if count exceeds 20

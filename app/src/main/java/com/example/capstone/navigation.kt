@@ -30,11 +30,11 @@ class navigation : AppCompatActivity() {
         val bottomNavigationView = binding.bottomNavigationView
         replace(dashboard())
 
-        val menuBurger = binding.menu
-
-        menuBurger.setOnClickListener { view ->
-            showTopMenu(view)
-        }
+//        val menuBurger = binding.menu
+//
+//        menuBurger.setOnClickListener { view ->
+//            showTopMenu(view)
+//        }
 
         if (user?.email == LoginPage.ADMIN_EMAIL) {
             // Admin user, load admin layout

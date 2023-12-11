@@ -8,21 +8,43 @@
     android:background="@color/background"
     tools:context=".dashboard">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/adamina"
-            android:text="@string/welcome_to_icom_con"
-            android:textColor="@color/primary"
-            android:textSize="30sp" />
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/adamina"
+                    android:text="@string/welcome_to_icom_con"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,6 +61,7 @@
                 android:fontFamily="@font/adamina"
                 android:text="@string/announcements"
                 android:textColor="@color/text"
+                android:layout_gravity="center_horizontal"
                 android:textSize="25sp" />
 
             <FrameLayout
@@ -50,9 +73,9 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/currentEvents"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
 
             </FrameLayout>
 
@@ -63,11 +86,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
             android:fontFamily="@font/adamina"
             android:text="@string/local_shops_and_services"
             android:textColor="@color/text"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -193,7 +215,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
             android:fontFamily="@font/adamina"
             android:text="@string/barangay_information"
             android:textColor="@color/text"

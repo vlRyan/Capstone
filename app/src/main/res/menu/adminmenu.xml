@@ -13,20 +13,15 @@
     <item
         android:id="@+id/navigation_read_report"
         android:icon="@drawable/baseline_read_report_24"
-        android:title="Reports" />
+        android:title="Report" />
 
     <item
         android:id="@+id/appointments"
         android:icon="@drawable/reservation"
-        android:title="Appointments"/>
-
-    <!--    <item-->
-    <!--        android:id="@+id/menu"-->
-    <!--        android:icon="@drawable/menu_icon"-->
-    <!--        android:title="Menu"/>-->
+        android:title="Appointment"/>
 
     <item
         android:id="@+id/profile"
         android:icon="@drawable/round_account_circle_24"
-        android:title="profile"/>
+        android:title="Profile"/>
 </menu>

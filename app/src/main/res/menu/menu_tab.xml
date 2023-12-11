@@ -18,15 +18,10 @@
     <item
         android:id="@+id/userappointments"
         android:icon="@drawable/reservation"
-        android:title="Appointments"/>
-
-    <!--    <item-->
-    <!--        android:id="@+id/menu"-->
-    <!--        android:icon="@drawable/more"-->
-    <!--        android:title="Menu"/>-->
+        android:title="Appointment"/>
 
     <item
         android:id="@+id/profile"
         android:icon="@drawable/round_account_circle_24"
-        android:title="profile"/>
+        android:title="Profile"/>
 </menu>

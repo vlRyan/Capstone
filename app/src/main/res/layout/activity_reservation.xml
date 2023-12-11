@@ -159,8 +159,7 @@
             <FrameLayout
                 android:id="@+id/others"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
                 android:layout_gravity="center_horizontal"
@@ -173,7 +172,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:hint="@string/other_purpose"
+                    android:background="@drawable/no_underline_edittext_background"
                     android:fontFamily="@font/adamina"
                     android:textColor="@color/text"
                     android:textSize="18sp" />

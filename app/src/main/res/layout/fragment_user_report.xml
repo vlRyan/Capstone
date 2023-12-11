@@ -89,7 +89,7 @@
             android:id="@+id/checkBox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Make Report Anonymous"
+            android:text="Submit Anonymously"
             android:textSize="20sp"
             android:fontFamily="serif"
             android:layout_margin="25dp"

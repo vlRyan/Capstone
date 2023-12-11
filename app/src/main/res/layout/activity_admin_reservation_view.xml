@@ -1,5 +1,6 @@
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,25 +8,36 @@
     android:orientation="vertical"
     tools:context=".Reservation.adminReservationView">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/appointments"
-            android:textSize="30sp"
-            android:layout_gravity="center"
-            android:textColor="@color/primary"
-            android:fontFamily="@font/adamina"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp" />
+            android:background="@color/primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/appointments"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/adamina"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <LinearLayout
         android:id="@+id/dateContainer"
@@ -33,13 +45,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="20dp">
 
         <ImageView
             android:id="@+id/previousBtn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/baseline_arrow_back_ios_24"
             android:layout_marginRight="20dp"
@@ -59,8 +71,8 @@
 
         <ImageView
             android:id="@+id/nextBtn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/forward1"
             android:layout_marginRight="20dp"
@@ -97,7 +109,16 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"
             android:textSize="25sp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_profile_24"
+            android:visibility="visible"
+            app:tint="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -128,7 +149,16 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"
             android:textSize="25sp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_profile_24"
+            android:visibility="visible"
+            app:tint="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -159,7 +189,16 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"
             android:textSize="25sp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_profile_24"
+            android:visibility="visible"
+            app:tint="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -190,7 +229,16 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"
             android:textSize="25sp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_profile_24"
+            android:visibility="visible"
+            app:tint="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -221,7 +269,16 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"
             android:textSize="25sp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_profile_24"
+            android:visibility="visible"
+            app:tint="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -252,7 +309,16 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"
             android:textSize="25sp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_profile_24"
+            android:visibility="visible"
+            app:tint="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -283,7 +349,16 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"
             android:textSize="25sp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_profile_24"
+            android:visibility="visible"
+            app:tint="@color/black" />
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -15,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.capstone.R
 import com.example.capstone.Reservation.AdminReservationViewItems
@@ -189,16 +190,43 @@ class adminReservationView : Fragment() {
 
     private fun updateLimitText(limitId: Int, count: Long) {
         val limitTextView = view?.findViewById<TextView>(limitId)
+        val image = view?.findViewById<ImageView>(R.id.imageView)
+        val image1 = view?.findViewById<ImageView>(R.id.imageView1)
+        val image2 = view?.findViewById<ImageView>(R.id.imageView2)
+        val image3 = view?.findViewById<ImageView>(R.id.imageView3)
+        val image4 = view?.findViewById<ImageView>(R.id.imageView4)
+        val image5 = view?.findViewById<ImageView>(R.id.imageView5)
+        val image6 = view?.findViewById<ImageView>(R.id.imageView6)
 
         Log.d("AppointmentUpdate", "Updating limit text - ID: $limitId, Count: $count")
 
+        if (limitTextView == null) {
+            limitTextView?.visibility = View.INVISIBLE
+            image?.visibility = View.VISIBLE
+            image1?.visibility = View.VISIBLE
+            image2?.visibility = View.VISIBLE
+            image3?.visibility = View.VISIBLE
+            image4?.visibility = View.VISIBLE
+            image5?.visibility = View.VISIBLE
+            image6?.visibility = View.VISIBLE
+        }
+
         if (limitTextView != null) {
-            limitTextView.text = "$count/20"
-            Log.d("AppointmentUpdate", "Limit ID: $limitId, Updated Count: $count/20")
+            limitTextView.visibility = View.VISIBLE
+            limitTextView.text = count.toString()
+            Log.d("AppointmentUpdate", "Limit ID: $limitId, Updated Count: $count")
+            image?.visibility = View.GONE
+            image1?.visibility = View.GONE
+            image2?.visibility = View.GONE
+            image3?.visibility = View.GONE
+            image4?.visibility = View.GONE
+            image5?.visibility = View.GONE
+            image6?.visibility = View.GONE
 
             if (count > 20) {
                 // Delete the appointment if count exceeds 20
                 deleteAppointment()
+                image?.visibility = View.VISIBLE
             }
         } else {
             Log.e("AppointmentUpdate", "TextView with ID $limitId not found.")

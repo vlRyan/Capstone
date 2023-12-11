@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,21 +7,43 @@
     android:background="@color/background"
     tools:context=".dashboard">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/adamina"
-            android:text="@string/welcome_to_icom_con"
-            android:textColor="@color/primary"
-            android:textSize="30sp" />
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/adamina"
+                    android:text="@string/welcome_to_icom_con"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,9 +71,9 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/currentEvents"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
 
             </FrameLayout>
 
@@ -66,7 +87,7 @@
             android:fontFamily="@font/adamina"
             android:text="@string/local_shops_and_services"
             android:textColor="@color/text"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -76,7 +97,10 @@
                 android:id="@+id/linearLayout12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.111"
@@ -85,8 +109,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/food"
-                    android:layout_width="145dp"
-                    android:layout_height="100dp"
+                    android:layout_width="165dp"
+                    android:layout_height="130dp"
                     app:cardCornerRadius="12dp">
 
                     <LinearLayout
@@ -118,8 +142,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/services"
-                    android:layout_width="145dp"
-                    android:layout_height="100dp"
+                    android:layout_width="165dp"
+                    android:layout_height="130dp"
                     android:layout_marginStart="15dp"
                     app:cardCornerRadius="12dp">
 
@@ -153,8 +177,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/store"
-                    android:layout_width="145dp"
-                    android:layout_height="100dp"
+                    android:layout_width="165dp"
+                    android:layout_height="130dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="20dp"
                     app:cardCornerRadius="12dp">
@@ -203,26 +227,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/contacts"
                 android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:layout_height="125dp"
-                android:elevation="8dp"
-                android:layout_margin="5dp">
+                android:elevation="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/border_black"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -247,36 +271,36 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/officials"
                 android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:layout_height="125dp"
-                android:elevation="8dp"
-                android:layout_margin="5dp">
+                android:elevation="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/border_black"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/adamina"
                         android:text="@string/barangay"
+                        android:textAlignment="center"
                         android:textColor="@color/primary"
-                        android:textSize="20sp"
-                        android:textAlignment="center"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/adamina"
                         android:text="@string/officials"
+                        android:textAlignment="center"
                         android:textColor="@color/primary"
-                        android:textSize="20sp"
-                        android:textAlignment="center"/>
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 

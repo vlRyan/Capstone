@@ -37,7 +37,7 @@
             android:textColor="@color/text"
             android:drawableStart="@drawable/email"
             android:textColorHint="#85000000"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/underline" />
 
@@ -55,7 +55,7 @@
             android:textColor="@color/text"
             android:layout_marginBottom="40dp"
             android:textColorHint="#85040404"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/LoginBtn"

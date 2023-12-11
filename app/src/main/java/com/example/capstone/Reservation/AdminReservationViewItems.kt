@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ import com.example.capstone.List.Appointment
 import com.example.capstone.R
 import com.example.capstone.Reservation.adminReservationView
 import com.example.capstone.bottomMenu.AppointmentsAdapter
+import com.example.capstone.navigation
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 import java.text.SimpleDateFormat
@@ -29,6 +31,12 @@ class AdminReservationViewItems : AppCompatActivity() {
         // Retrieve the selected time from the intent
         val selectedTime = intent.getStringExtra("selectedTime")
         val selectedDate = intent.getStringExtra("selectedDate")
+
+        val back: ImageView = findViewById(R.id.back)
+        back.setOnClickListener{
+            val login = Intent(this, navigation::class.java)
+            startActivity(login)
+        }
 
         // Initialize RecyclerView and its adapter
         appointmentsRecyclerView = findViewById(R.id.appointmentsRecyclerView)

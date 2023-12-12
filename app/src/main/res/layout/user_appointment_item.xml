@@ -13,14 +13,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/adamina"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/textDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/adamina"
+                android:layout_toEndOf="@id/textMonth"/>
+
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:fontFamily="@font/adamina"
+                android:textColor="@color/secondary"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textFirstName"
@@ -29,7 +61,6 @@
                 android:textSize="25sp"
                 android:textColor="@color/text"
                 android:fontFamily="@font/adamina"
-                android:textStyle="bold"
                 android:layout_marginEnd="2dp"/>
 
             <TextView
@@ -38,8 +69,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/adamina"
                 android:textSize="25sp"
-                android:textColor="@color/text"
-                android:textStyle="bold"/>
+                android:textColor="@color/text"/>
 
         </LinearLayout>
 
@@ -59,40 +89,6 @@
             android:textSize="25sp"
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/textMonth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:textColor="@color/text"
-                android:fontFamily="@font/adamina"
-                android:layout_marginEnd="2dp"/>
-
-            <TextView
-                android:id="@+id/textDay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:textColor="@color/text"
-                android:fontFamily="@font/adamina"
-                android:layout_marginEnd="2dp"/>
-
-            <TextView
-                android:id="@+id/textTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:fontFamily="@font/adamina"
-                android:textColor="@color/text"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 

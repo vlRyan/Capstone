@@ -31,7 +31,6 @@
                 android:fontFamily="@font/adamina"
                 android:maxLines="1"
                 android:text="@string/what"
-                android:textAllCaps="true"
                 android:textColor="@color/text"
                 android:textSize="20sp" />
 
@@ -63,7 +62,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/adamina"
                 android:text="@string/when_"
-                android:textAllCaps="true"
                 android:textColor="@color/text"
                 android:textSize="20sp" />
 
@@ -118,7 +116,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/adamina"
                 android:text="@string/where"
-                android:textAllCaps="true"
                 android:textColor="@color/text"
                 android:textSize="20sp" />
 

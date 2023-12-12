@@ -28,11 +28,9 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
                 android:fontFamily="@font/adamina"
                 android:maxLines="1"
                 android:text="@string/shop_name"
-                android:textAllCaps="true"
                 android:textColor="@color/text"
                 android:textSize="20sp" />
 
@@ -58,25 +56,13 @@
             android:layout_marginBottom="8dp"
             android:padding="5dp">
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/adamina"
-                android:text="@string/shop_description_"
-                android:textAllCaps="true"
-                android:textColor="@color/text"
-                android:textSize="20sp" />
-
             <TextView
                 android:id="@+id/shopDes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
                 android:fontFamily="@font/adamina"
                 android:text="@string/description"
                 android:layout_gravity="center"
-                android:layout_marginStart="5dp"
                 android:textColor="@color/text"
                 android:textSize="20sp" />
 
@@ -95,7 +81,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/adamina"
                 android:text="@string/shop_location"
-                android:textAllCaps="true"
                 android:textColor="@color/text"
                 android:textSize="20sp" />
 

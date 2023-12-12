@@ -27,7 +27,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/what"
-                android:textAllCaps="true"
                 android:fontFamily="@font/adamina"
                 android:textSize="20sp"
                 android:textColor="@color/text"
@@ -59,7 +58,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/when_"
-                android:textAllCaps="true"
                 android:fontFamily="@font/adamina"
                 android:textSize="20sp"
                 android:textColor="@color/text" />
@@ -79,7 +77,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/time"
-                android:textAllCaps="true"
                 android:fontFamily="@font/adamina"
                 android:textSize="20sp"
                 android:textColor="@color/text" />
@@ -106,7 +103,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/where"
-                android:textAllCaps="true"
                 android:fontFamily="@font/adamina"
                 android:textSize="20sp"
                 android:textColor="@color/text" />

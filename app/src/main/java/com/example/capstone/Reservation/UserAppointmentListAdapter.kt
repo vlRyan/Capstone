@@ -1,13 +1,15 @@
 package com.example.capstone.Reservation
 
-// UserAppointmentListAdapter.kt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.List.UserAppointmentData
 import com.example.capstone.R
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 class UserAppointmentListAdapter(private val appointmentList: List<UserAppointmentData>) :
     RecyclerView.Adapter<UserAppointmentListAdapter.UserAppointmentViewHolder>() {
@@ -20,6 +22,7 @@ class UserAppointmentListAdapter(private val appointmentList: List<UserAppointme
         val month: TextView = itemView.findViewById(R.id.textMonth)
         val day: TextView = itemView.findViewById(R.id.textDay)
         val time: TextView = itemView.findViewById(R.id.textTime)
+        val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAppointmentViewHolder {

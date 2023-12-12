@@ -90,6 +90,19 @@
             android:fontFamily="@font/adamina"
             android:textColor="@color/text"/>
 
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/delete"
+            android:textSize="20sp"
+            android:fontFamily="@font/adamina"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

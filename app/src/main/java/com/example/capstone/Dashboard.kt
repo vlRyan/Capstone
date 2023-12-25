@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.LinearLayout
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,8 +41,12 @@ class dashboard : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val barangayOfficials: CardView = view.findViewById(R.id.officials)
-        val contacts: CardView = view.findViewById(R.id.contacts)
+
+        val officials: LinearLayout = view.findViewById<LinearLayout>(R.id.officials)
+        val contacts: LinearLayout = view.findViewById<LinearLayout>(R.id.contacts)
+        val message: LinearLayout = view.findViewById<LinearLayout>(R.id.message)
+        val policies: LinearLayout = view.findViewById<LinearLayout>(R.id.policies)
+
         val FnB: CardView = view.findViewById(R.id.food)
         val services: CardView = view.findViewById(R.id.services)
         val stores: CardView = view.findViewById(R.id.store)
@@ -60,7 +66,7 @@ class dashboard : Fragment() {
             startActivity(intent)
         }
 
-        barangayOfficials.setOnClickListener{
+        officials.setOnClickListener{
             val intent = Intent(context, BarangayOfficials::class.java)
             startActivity(intent)
         }

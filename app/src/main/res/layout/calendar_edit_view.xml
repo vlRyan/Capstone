@@ -133,7 +133,7 @@
                 android:fontFamily="@font/adamina"
                 android:layout_marginEnd="50dp"
                 android:textColor="@color/white"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button_primary"/>
 
             <Button
                 android:id="@+id/deleteButton"
@@ -143,7 +143,7 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/adamina"
                 android:textColor="@color/white"
-                android:background="@drawable/button"/>
+                android:background="@drawable/button_primary"/>
         </LinearLayout>
 
     </LinearLayout>

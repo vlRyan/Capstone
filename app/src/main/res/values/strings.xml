@@ -2,9 +2,6 @@
     <string name="app_name">Capstone</string>
     <string name="nav_open">Open Navigation Drawer</string>
     <string name="nav_close">Close Navigation Drawer</string>
-
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="month_day_year">Month Day, Year</string>
     <string name="appointments">Appointments</string>
     <string name="_0_20">0</string>
@@ -51,7 +48,7 @@
     <string name="report_description">report_description</string>
     <string name="accept">Accept</string>
     <string name="reject">Reject</string>
-    <string name="date_">date</string>
+    <string name="date_">Date</string>
     <string name="useremail">useremail</string>
     <string name="reported_by">Reported By:</string>
     <string name="title">Title</string>

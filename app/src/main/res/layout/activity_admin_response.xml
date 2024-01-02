@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".adminResponse"
-    android:background="@color/background">
+    android:background="@color/accentbackground">
 
     <TextView
         android:id="@+id/response"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/primary"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/reason_of_rejection"
@@ -24,7 +24,7 @@
         android:layout_width="350dp"
         android:layout_height="300dp"
         android:background="@drawable/border_black"
-        android:textSize="25sp"
+        android:textSize="18sp"
         android:textColor="@color/text"
         android:inputType="textMultiLine"
         android:paddingLeft="10dp"
@@ -37,14 +37,13 @@
 
     <Button
         android:id="@+id/submitResponseButton"
+        style="@style/button"
+        android:background="@drawable/button_primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/send_response"
-        android:textColor="@color/white"
-        android:background="@drawable/button"
         android:layout_gravity="center"
         android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        android:textSize="25sp" />
+        android:paddingLeft="10dp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

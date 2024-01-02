@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="@drawable/border">
+        android:background="@drawable/border_background_secondary">
 
         <TextView
             android:id="@+id/nameTextView"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/adamina"
             android:text="@string/name"
-            android:textSize="25sp"
+            android:textSize="18sp"
             android:textColor="@color/text"/>
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/adamina"
             android:text="@string/purpose"
-            android:textSize="25sp"
+            android:textSize="18sp"
             android:textColor="@color/text" />
 
     </LinearLayout>

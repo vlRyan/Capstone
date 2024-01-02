@@ -272,7 +272,7 @@
             android:id="@+id/submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button"
+            android:background="@drawable/button_primary"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_margin="20dp"

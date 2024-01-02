@@ -1,45 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminCheck"
-    android:background="@color/background"
+    android:background="@color/accentbackground"
     android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/primary">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/primary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp">
+            android:layout_gravity="center"
+            android:fontFamily="@font/adamina"
+            android:text="New Reports"
+            android:textColor="@color/background"
+            android:layout_marginStart="10dp"
+            android:textSize="25sp" />
 
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/adamina"
-                android:text="@string/new_reports"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
-
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
+    </LinearLayout>
 
     <ListView
         android:id="@+id/reportsListView"
@@ -47,6 +32,5 @@
         android:layout_height="wrap_content"
         android:divider="@color/primary"
         android:dividerHeight="2dp" />
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>

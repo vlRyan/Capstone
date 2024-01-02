@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ReportDetails"
-    android:background="@color/background">
+    android:background="@color/accentbackground">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,31 +29,21 @@
                     android:textColor="@color/text"
                     android:fontFamily="@font/adamina"
                     android:layout_height="wrap_content"
-                    android:text="@string/report_title"
-                    android:textSize="25sp"
+                    android:text="Title"
+                    android:textSize="18sp"
                     android:padding="8dp" />
 
                 <TextView
                     android:id="@+id/reportDateTextView"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/date_"
+                    android:text="Date"
                     android:fontFamily="@font/adamina"
                     android:textColor="@color/text"
                     android:textSize="18sp"
                     android:padding="8dp" />
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/reportDescriptionTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:fontFamily="@font/adamina"
-                android:textColor="@color/text"
-                android:text="@string/report_description"
-                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/mediaImageView"
@@ -63,6 +53,16 @@
                 android:paddingRight="10dp"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/reportDescriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:fontFamily="@font/adamina"
+                android:textColor="@color/text"
+                android:text="Description"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -78,10 +78,10 @@
                     android:layout_weight="1"
                     android:text="@string/accept"
                     android:fontFamily="@font/adamina"
-                    android:textColor="@color/white"
+                    android:textColor="@color/background"
                     android:background="@color/accept"
-                    android:layout_margin="5dp"/>
-
+                    android:layout_margin="5dp"
+                    android:textAllCaps="false"/>
 
                 <Button
                     android:id="@+id/rejectButton"
@@ -90,9 +90,10 @@
                     android:layout_weight="1"
                     android:text="@string/reject"
                     android:fontFamily="@font/adamina"
-                    android:textColor="@color/white"
+                    android:textColor="@color/background"
                     android:background="@color/reject"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    android:textAllCaps="false"/>
             </LinearLayout>
 
         </LinearLayout>

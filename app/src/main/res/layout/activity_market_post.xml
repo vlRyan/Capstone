@@ -16,7 +16,7 @@
         android:fontFamily="@font/adamina"
         android:text="@string/store_and_grocery"
         android:textColor="@color/primary"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +38,7 @@
             android:fontFamily="@font/adamina"
             android:text="@string/name_of_shop"
             android:textColor="@color/text"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/shopName"
@@ -47,7 +47,7 @@
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:textColor="@color/text"
-            android:textSize="25sp"
+            android:textSize="18sp"
             android:background="@drawable/border_black"
             android:fontFamily="@font/adamina"
             android:ems="10"
@@ -72,7 +72,7 @@
             android:fontFamily="@font/adamina"
             android:text="@string/shop_description"
             android:textColor="@color/text"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/shopDescription"
@@ -82,7 +82,7 @@
             android:background="@drawable/border_black"
             android:ems="10"
             android:textColor="@color/text"
-            android:textSize="25sp"
+            android:textSize="18sp"
             android:gravity="top|start"
             android:inputType="text"
             android:fontFamily="@font/adamina"
@@ -108,7 +108,7 @@
             android:fontFamily="@font/adamina"
             android:text="@string/location"
             android:textColor="@color/text"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -131,7 +131,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/border_black"
             android:ems="10"
-            android:textSize="25sp"
+            android:textSize="18sp"
             android:textColor="@color/text"
             android:fontFamily="@font/adamina"
             android:gravity="center"
@@ -141,6 +141,7 @@
 
     <Button
         android:id="@+id/post"
+        style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:paddingRight="10dp"

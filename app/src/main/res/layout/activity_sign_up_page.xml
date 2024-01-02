@@ -12,7 +12,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:background="@color/primary">
 
         <ImageView
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/previous_arrow_icon"
-            app:tint="@color/tertiary"
+            app:tint="@color/background"
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true" />
 
@@ -30,8 +30,8 @@
             android:layout_centerInParent="true"
             android:fontFamily="@font/adamina"
             android:text="@string/sign_up"
-            android:textColor="@color/tertiary"
-            android:textSize="30sp" />
+            android:textColor="@color/background"
+            android:textSize="25sp" />
 
     </RelativeLayout>
 
@@ -46,7 +46,7 @@
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textColorHint="@color/text"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_marginTop="40dp"/>
 
     <EditText
@@ -60,7 +60,7 @@
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textColorHint="@color/text"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
 
     <EditText
@@ -75,7 +75,7 @@
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textColorHint="@color/text"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
 
     <EditText
@@ -90,7 +90,7 @@
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textColorHint="@color/text"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
 
     <EditText
@@ -105,20 +105,20 @@
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textColorHint="@color/text"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/button"
         android:background="@drawable/button_primary"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
         android:fontFamily="@font/adamina"
         android:text="@string/create_account"
-        android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_marginTop="40dp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

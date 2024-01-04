@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".user_send_message">
+    tools:context=".Message.user_send_message">
 
     <TextView
         android:id="@+id/textView"

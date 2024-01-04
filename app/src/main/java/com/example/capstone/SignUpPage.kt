@@ -7,8 +7,12 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.capstone.List.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
@@ -18,6 +22,7 @@ class SignUpPage : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var df: DocumentReference
     private lateinit var fStore: FirebaseFirestore
+    private lateinit var database: DatabaseReference
     private var valid: Boolean = false
 
 
@@ -44,6 +49,9 @@ class SignUpPage : AppCompatActivity() {
     }
 
     private fun userSignUp() {
+        database =  Firebase.database.reference
+
+
 
         val Uname: EditText = findViewById(R.id.username)
         val email: EditText = findViewById(R.id.email)
@@ -57,6 +65,7 @@ class SignUpPage : AppCompatActivity() {
         val Confirm = confirmPass.text.toString()
         val name = Uname.text.toString()
         val pn = phone_num.text.toString()
+        val uid = auth.currentUser?.uid!!
 
         if (email.text.isEmpty() or pass.text.isEmpty() or Uname.text.isEmpty() or phone_num.text.isEmpty()){
 
@@ -74,33 +83,10 @@ class SignUpPage : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, To navigation
+                        database.child("users").child(uid).setValue(User(name, Email, pn, uid))
                         val main = Intent(this, navigation::class.java)
                         startActivity(main)
-                        // _______________________________STORING USER INFO TO FIREBASEFIRESTORE______________________________________
-                        val user = auth.currentUser
-                        if (user != null) {
-                            df = fStore.collection("Users").document(user.uid)
-                            val userInf = hashMapOf(
-                                "Name" to name,
-                                "Email" to Email,
-                                "Phone Number" to pn,
-                                "Password" to Password,
-
-                                // code line will specify the admin and user
-                                "User" to "1"
-                            )
-                            df.set(userInf)
-                        }
-                        // _______________________________changed lines______________________________________
-
-                        Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-
-
-                    } else {
-                        Toast.makeText(
-                            baseContext, "Authentication failed.", Toast.LENGTH_SHORT,
-                        ).show()
-
+                        Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT).show()
                     }
                 }
                 .addOnFailureListener {
@@ -128,7 +114,6 @@ class SignUpPage : AppCompatActivity() {
             true
 
         }
-
     }
 
 

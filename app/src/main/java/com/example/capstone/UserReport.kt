@@ -82,98 +82,119 @@ class UserReport : AppCompatActivity() {
             val description = descriptionEditText.text.toString()
             user = fAuth.currentUser?.email.toString()
 
+            if (titleEditText.text.isEmpty()) {
+                checkFields(titleEditText)
+            }
+            if (descriptionEditText.text.isEmpty()) {
+                checkFields(descriptionEditText)
+            } else {
 
-                user = if (checkBox.isChecked){
+                user = if (checkBox.isChecked) {
                     "Anonymous Sender"
-                }
-                else{
+                } else {
                     fAuth.currentUser?.email.toString()
                 }
 
 //            val user = fAuth.currentUser?.email.toString()
 
-            // Prevent double submission
-            if (submissionInProgress) {
-                return@setOnClickListener
-            }
+                // Prevent double submission
+                if (submissionInProgress) {
+                    return@setOnClickListener
+                }
 
-            if (mediaUri != null) {
-                submissionInProgress = true
+                if (mediaUri != null) {
+                    submissionInProgress = true
 
-                val storageRef = FirebaseStorage.getInstance().reference
-                val mediaFileName = UUID.randomUUID().toString()
-                val mediaRef = storageRef.child(mediaFileName)
+                    val storageRef = FirebaseStorage.getInstance().reference
+                    val mediaFileName = UUID.randomUUID().toString()
+                    val mediaRef = storageRef.child(mediaFileName)
 
-                mediaRef.putFile(mediaUri!!)
-                    .addOnSuccessListener { taskSnapshot ->
-                        // Media uploaded successfully; get the download URL
-                        mediaRef.downloadUrl
-                            .addOnSuccessListener { uri ->
-                                val mediaURL = uri.toString()
-                                // Create a new report document and add it to Firestore
-                                val report = hashMapOf(
-                                    "title" to title,
-                                    "description" to description,
-                                    "mediaURL" to mediaURL,
-                                    "timestamp" to FieldValue.serverTimestamp(),
-                                    "status" to "Pending",
-                                    "UserID" to user
-                                )
+                    mediaRef.putFile(mediaUri!!)
+                        .addOnSuccessListener { taskSnapshot ->
+                            // Media uploaded successfully; get the download URL
+                            mediaRef.downloadUrl
+                                .addOnSuccessListener { uri ->
+                                    val mediaURL = uri.toString()
+                                    // Create a new report document and add it to Firestore
+                                    val report = hashMapOf(
+                                        "title" to title,
+                                        "description" to description,
+                                        "mediaURL" to mediaURL,
+                                        "timestamp" to FieldValue.serverTimestamp(),
+                                        "status" to "Pending",
+                                        "UserID" to user
+                                    )
 
-                                reportsCollection.add(report)
-                                    .addOnSuccessListener { documentReference ->
-                                        // Report added successfully
-                                        val intent = Intent(this, navigation::class.java)
-                                        startActivity(intent)
-                                        Toast.makeText(this, "Report submitted successfully", Toast.LENGTH_SHORT).show()
-                                        finish()
-                                    }
-                                    .addOnFailureListener { e ->
-                                        // Handle the error
-                                        Log.e("Firestore", "Error adding report: $e")
-                                        Toast.makeText(this, "Error submitting report: $e", Toast.LENGTH_SHORT).show()
-                                    }
-                                    .addOnCompleteListener {
-                                        submissionInProgress = false // Reset the submission flag
-                                    }
-                            }
-                            .addOnFailureListener { e ->
-                                // Handle the error in getting the download URL
-                                Log.e("Storage", "Error getting download URL: $e")
-                                Toast.makeText(this, "Error getting media download URL: $e", Toast.LENGTH_SHORT).show()
-                            }
-                    }
-                    .addOnFailureListener { e ->
-                        // Handle the error in uploading media
-                        Log.e("Storage", "Error uploading media: $e")
-                        Toast.makeText(this, "Error uploading media: $e", Toast.LENGTH_SHORT).show()
-                    }
-            } else {
-                // Media is not selected, you can proceed without media
-                val report = hashMapOf(
-                    "title" to title,
-                    "timestamp" to FieldValue.serverTimestamp(),
-                    "description" to description,
-                    "status" to "Pending",
-                    "UserID" to user
-                )
-                submissionInProgress = true
+                                    reportsCollection.add(report)
+                                        .addOnSuccessListener { documentReference ->
+                                            // Report added successfully
+                                            val intent = Intent(this, navigation::class.java)
+                                            startActivity(intent)
+                                            Toast.makeText(
+                                                this,
+                                                "Report submitted successfully",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                            finish()
+                                        }
+                                        .addOnFailureListener { e ->
+                                            // Handle the error
+                                            Log.e("Firestore", "Error adding report: $e")
+                                            Toast.makeText(
+                                                this,
+                                                "Error submitting report: $e",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
+                                        .addOnCompleteListener {
+                                            submissionInProgress =
+                                                false // Reset the submission flag
+                                        }
+                                }
+                                .addOnFailureListener { e ->
+                                    // Handle the error in getting the download URL
+                                    Log.e("Storage", "Error getting download URL: $e")
+                                    Toast.makeText(
+                                        this,
+                                        "Error getting media download URL: $e",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                        }
+                        .addOnFailureListener { e ->
+                            // Handle the error in uploading media
+                            Log.e("Storage", "Error uploading media: $e")
+                            Toast.makeText(this, "Error uploading media: $e", Toast.LENGTH_SHORT)
+                                .show()
+                        }
+                } else {
+                    // Media is not selected, you can proceed without media
+                    val report = hashMapOf(
+                        "title" to title,
+                        "timestamp" to FieldValue.serverTimestamp(),
+                        "description" to description,
+                        "status" to "Pending",
+                        "UserID" to user
+                    )
+                    submissionInProgress = true
 
-                // Add the report to Firestore
-                reportsCollection.add(report)
-                    .addOnSuccessListener { documentReference ->
-                        val intent = Intent(this, navigation::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
-                    .addOnFailureListener { e ->
-                        // Handle the error
-                        Log.e("MediaUpload", "Error uploading media: $e")
-                        Toast.makeText(this, "Error submitting report: $e", Toast.LENGTH_SHORT).show()
-                    }
-                    .addOnCompleteListener {
-                        submissionInProgress = false
-                    }
+                    // Add the report to Firestore
+                    reportsCollection.add(report)
+                        .addOnSuccessListener { documentReference ->
+                            val intent = Intent(this, navigation::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        .addOnFailureListener { e ->
+                            // Handle the error
+                            Log.e("MediaUpload", "Error uploading media: $e")
+                            Toast.makeText(this, "Error submitting report: $e", Toast.LENGTH_SHORT)
+                                .show()
+                        }
+                        .addOnCompleteListener {
+                            submissionInProgress = false
+                        }
+                }
             }
         }
     }
@@ -187,5 +208,11 @@ class UserReport : AppCompatActivity() {
         }
     }
 
+    private fun checkFields(text: EditText){
+        titleEditText = findViewById(R.id.topicReportInput)
+        descriptionEditText = findViewById(R.id.descriptionReportInput)
+        text.error = "Empty"
+        Toast.makeText(this, "Please Fill All The Fields", Toast.LENGTH_SHORT).show()
 
+    }
 }

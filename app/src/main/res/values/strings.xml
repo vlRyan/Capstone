@@ -108,6 +108,7 @@
     <string name="create_announcement">Create Announcement</string>
     <string name="un_approved_reports">Un-Approved Reports</string>
     <string name="new_reports">New Reports</string>
+    <string name="messages">Messages</string>
     <string-array name="months">
         <item>Month</item>
         <item>January</item>

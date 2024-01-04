@@ -100,7 +100,7 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".Adapters.Inbox"
+            android:name=".Message.l"
             android:exported="false" />
         <activity
             android:name=".SignUpPage"

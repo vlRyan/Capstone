@@ -21,7 +21,12 @@
         android:title="Appointment"/>
 
     <item
-        android:id="@+id/profile"
-        android:icon="@drawable/round_account_circle_24"
-        android:title="Profile"/>
+        android:id="@+id/inbox"
+        android:icon="@drawable/baseline_chat_bubble_24"
+        android:title="Inbox"/>
+
+<!--    <item-->
+<!--        android:id="@+id/profile"-->
+<!--        android:icon="@drawable/round_account_circle_24"-->
+<!--        android:title="Profile"/>-->
 </menu>

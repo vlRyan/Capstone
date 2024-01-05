@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
         <activity
+            android:name=".Message.UserSendMessage"
+            android:exported="false" />
+        <activity
             android:name=".LocalShops.ServicePost"
             android:exported="false" />
         <activity

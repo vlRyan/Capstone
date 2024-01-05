@@ -8,10 +8,10 @@ import androidx.appcompat.widget.PopupMenu
 import android.view.MenuInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.capstone.Message.user_send_message
 import com.example.capstone.Reservation.adminReservationView
 import com.example.capstone.bottomMenu.ReservationList
 import com.example.capstone.databinding.ActivityMainBinding
+import com.example.capstone.message.Inbox
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -56,6 +56,7 @@ class navigation : AppCompatActivity() {
                 R.id.userappointments -> replace(ReservationList())
                 R.id.appointments -> replace(adminReservationView())
                 R.id.profile -> replace(Profile())
+                R.id.inbox -> replace(Inbox())
 
                 else ->{
 
@@ -73,10 +74,10 @@ class navigation : AppCompatActivity() {
 
         popup.setOnMenuItemClickListener { item ->
             when (item.itemId) {
-                R.id.message -> {
-                    replace(user_send_message())
-                    true
-                }
+//                R.id.message -> {
+//                    replace(user_send_message())
+//                    true
+//                }
                 R.id.logout -> {
                     Firebase.auth.signOut()
                     val intent = Intent(this, LoginPage::class.java)

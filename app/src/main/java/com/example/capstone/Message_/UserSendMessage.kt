@@ -36,7 +36,7 @@ class UserSendMessage : AppCompatActivity() {
         setContentView(R.layout.activity_user_send_message)
 
         val name = intent.getStringExtra("name")
-        val receiverUid = intent.getStringExtra("uid")
+        val receiverUid = "pFu7PmjkeUTHCi3qmzKVrN3whoI2"
         val senderUid = FirebaseAuth.getInstance().currentUser?.uid
 
         db = FirebaseDatabase.getInstance().reference

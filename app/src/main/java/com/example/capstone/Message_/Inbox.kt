@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.Adapters.UserAdapter
 import com.example.capstone.List.User
-import com.example.capstone.Message_.UserSendMessage
+import com.example.capstone.Message_.AdminMessage
 import com.example.capstone.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -63,7 +63,7 @@ class Inbox : Fragment() {
                     messagesRecyclerView.adapter = adapter
                     adapter.onItemClickListener(object : UserAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(context, UserSendMessage::class.java)
+                            val intent = Intent(context, AdminMessage::class.java)
                             intent.putExtra("name", userList[position].name)
                             intent.putExtra("uid", userList[position].uid)
                             startActivity(intent)

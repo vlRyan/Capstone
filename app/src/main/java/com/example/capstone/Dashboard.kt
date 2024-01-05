@@ -23,6 +23,7 @@ import com.example.capstone.LocalShops.FoodnBev
 import com.example.capstone.LocalShops.Market
 import com.example.capstone.LocalShops.Services
 import com.example.capstone.Message_.UserInbox
+import com.example.capstone.Message_.UserSendMessage
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestore
@@ -78,7 +79,7 @@ class dashboard : Fragment() {
         }
 
         message.setOnClickListener{
-            val intent = Intent(context, UserInbox::class.java)
+            val intent = Intent(context, UserSendMessage::class.java)
             startActivity(intent)
         }
 

@@ -22,6 +22,7 @@ import com.example.capstone.List.Events
 import com.example.capstone.LocalShops.FoodnBev
 import com.example.capstone.LocalShops.Market
 import com.example.capstone.LocalShops.Services
+import com.example.capstone.Message_.UserInbox
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestore
@@ -74,6 +75,11 @@ class dashboard : Fragment() {
         contacts.setOnClickListener {
             val intent1 = Intent(context, EmergencyContacts::class.java)
             startActivity(intent1)
+        }
+
+        message.setOnClickListener{
+            val intent = Intent(context, UserInbox::class.java)
+            startActivity(intent)
         }
 
         recyclerView = view.findViewById(R.id.currentEvents)

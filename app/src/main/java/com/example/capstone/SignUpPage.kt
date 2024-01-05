@@ -65,7 +65,6 @@ class SignUpPage : AppCompatActivity() {
         val Confirm = confirmPass.text.toString()
         val name = Uname.text.toString()
         val pn = phone_num.text.toString()
-        val uid = auth.currentUser?.uid!!
 
         if (email.text.isEmpty() or pass.text.isEmpty() or Uname.text.isEmpty() or phone_num.text.isEmpty()){
 
@@ -83,7 +82,7 @@ class SignUpPage : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, To navigation
-                        database.child("users").child(uid).setValue(User(name, Email, pn, uid))
+                        database.child("users").child(auth.currentUser?.uid!!).setValue(User(name, Email, pn, auth.currentUser?.uid))
                         val main = Intent(this, navigation::class.java)
                         startActivity(main)
                         Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT).show()

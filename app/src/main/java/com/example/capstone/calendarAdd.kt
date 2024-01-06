@@ -38,7 +38,6 @@ class calendarAdd : AppCompatActivity() {
 
         add.setOnClickListener {
             events()
-            finish()
         }
     }
     @RequiresApi(Build.VERSION_CODES.M)
@@ -49,38 +48,45 @@ class calendarAdd : AppCompatActivity() {
         val title: EditText = findViewById(R.id.eventTitle)
         val desc: EditText = findViewById(R.id.eventDescription)
 
-        val eventTitle = title.text.toString()
-        val description = desc.text.toString()
+        if (title.text.isEmpty()){
+            title.error = "Empty Field"
+        }else if (desc.text.isEmpty()){
+            desc.error  = "Empty Field"
+        } else {
 
-        val datePicker: DatePicker = findViewById(R.id.datePicker)
-        val timePicker: TimePicker = findViewById(R.id.time_picker)
+            val eventTitle = title.text.toString()
+            val description = desc.text.toString()
 
-        val monthp = datePicker.month + 1
-        val month = monthp.toString()
-        val day = datePicker.dayOfMonth.toString()
-        val year = datePicker.year.toString()
-        val date = "$month/$day/$year"
-        val hour = timePicker.hour.toString()
-        val min = timePicker.minute.toString()
+            val datePicker: DatePicker = findViewById(R.id.datePicker)
+            val timePicker: TimePicker = findViewById(R.id.time_picker)
 
-        val time = if  (timePicker.hour >= 12){
-            "$hour:$min PM"
-        }else{
-            "$hour:$min AM"
+            val monthp = datePicker.month + 1
+            val month = monthp.toString()
+            val day = datePicker.dayOfMonth.toString()
+            val year = datePicker.year.toString()
+            val date = "$month/$day/$year"
+            val hour = timePicker.hour.toString()
+            val min = timePicker.minute.toString()
+
+            val time = if (timePicker.hour >= 12) {
+                "$hour:$min PM"
+            } else {
+                "$hour:$min AM"
+            }
+
+
+            df = fStore.collection("EventsAnnouncement").document()
+            val events = hashMapOf(
+                "eventTitle" to eventTitle,
+                "eventPlace" to description,
+                "eventDate" to date,
+                "eventTime" to time
+            )
+            df.set(events)
+            Toast.makeText(this, "uploaded", Toast.LENGTH_SHORT).show()
+
+            finish()
         }
-
-
-        df = fStore.collection("EventsAnnouncement").document()
-        val events = hashMapOf(
-            "eventTitle" to eventTitle,
-            "eventPlace" to description,
-            "eventDate" to date,
-            "eventTime" to time
-        )
-        df.set(events)
-        Toast.makeText(this, "uploaded", Toast.LENGTH_SHORT).show()
-
-
     }
 
 

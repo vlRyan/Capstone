@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,6 +25,7 @@ import com.example.capstone.LocalShops.Market
 import com.example.capstone.LocalShops.Services
 import com.example.capstone.Message_.UserInbox
 import com.example.capstone.Message_.UserSendMessage
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestore
@@ -37,7 +39,9 @@ class dashboard : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var eventsArray: ArrayList<Events>
     private lateinit var dashboardAdapter: dashboardEventsAdapter
+    private lateinit var auth: FirebaseAuth
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -48,10 +52,16 @@ class dashboard : Fragment() {
         val contacts: LinearLayout = view.findViewById<LinearLayout>(R.id.contacts)
         val message: LinearLayout = view.findViewById<LinearLayout>(R.id.message)
         val policies: LinearLayout = view.findViewById<LinearLayout>(R.id.policies)
+        val user = view.findViewById<TextView>(R.id.email)
 
         val FnB: CardView = view.findViewById(R.id.food)
         val services: CardView = view.findViewById(R.id.services)
         val stores: CardView = view.findViewById(R.id.store)
+
+        auth = FirebaseAuth.getInstance()
+
+        user.text = auth.currentUser?.email
+
 
         FnB.setOnClickListener {
             val intent = Intent(context, FoodnBev::class.java)

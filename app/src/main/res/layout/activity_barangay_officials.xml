@@ -4,35 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Dashboard.BarangayOfficials"
-    android:background="@color/background"
+    android:background="@color/accentbackground"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/primary">
-
-        <ImageView
-            android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/previous_arrow_icon"
-            app:tint="@color/tertiary"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true" />
+        android:layout_height="60dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:fontFamily="@font/adamina"
-            android:text="@string/barangay_officials"
-            android:textColor="@color/tertiary"
-            android:textSize="30sp" />
+            android:text="Barangay Officials"
+            android:textColor="@color/background"
+            android:textSize="25sp"
+            android:layout_marginStart="10dp"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,206 +38,575 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:background="@drawable/border"
-                android:layout_margin="10dp">
+                android:orientation="horizontal"
+                android:background="@color/background"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:gravity="center">
 
-                <TextView
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/profile_icon"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="10dp"/>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:text="@string/punong_barangay"
-                    android:textColor="@color/secondary"
-                    android:textSize="25sp" />
+                    android:orientation="vertical" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/adamina"
-                    android:text="@string/arthur_diplat_carlos"
-                    android:textColor="@color/text"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/adamina"
+                        android:text="Punong Barangay"
+                        android:textColor="@color/accent"
+                        android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:gravity="center"
-                    android:text="@string/sangguniang_barangay_members"
-                    android:textColor="@color/secondary"
-                    android:textSize="25sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/adamina"
+                        android:text="Arthur Diplat Carlos"
+                        android:textColor="@color/text"
+                        android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Thomas Kuwadla Dumalti"
-                    android:textColor="@color/text"
-                    android:fontFamily="@font/adamina"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Esther Kiw-Is Litilit"
-                    android:textColor="@color/text"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Richard Wadingan Tamayo"
-                    android:textColor="@color/text"
-                    android:fontFamily="@font/adamina"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Carla Joy Milanes Cacho"
-                    android:textColor="@color/text"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ana Lawad Calatan"
-                    android:textColor="@color/text"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Philip Calyaen Tanawe"
-                    android:textColor="@color/text"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Evangelin Api-It David"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                </LinearLayout>
+                
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="vertical"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/border">
+                android:layout_margin="10dp"
+                android:background="@color/accentbackground">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:text="Sangguniang Barangay Members"
                     android:fontFamily="@font/adamina"
-                    android:text="@string/sk_chairperson"
-                    android:textColor="@color/secondary"
-                    android:textSize="25sp" />
+                    android:layout_gravity="center"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:text="Cheralyn Kate Dumapis"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/adamina"
-                    android:text="@string/sk_kagawad"
-                    android:textColor="@color/secondary"
-                    android:textSize="25sp"
-                    android:gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text="Gwyneth Paycan Pooten"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Valery Binay-An Bugtong"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Thomas Kuwadla Dumalti"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Yvonne Ogas Losnong"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                    </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Klaren Mines Binay-An"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Elijah Keith Todyog"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Jeremy Dadis Magmoyao"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Esther Kiw-Is Litilit"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Irish Paping Tucyapao"
-                    android:fontFamily="@font/adamina"
-                    android:textColor="@color/text"
-                    android:textSize="20sp" />
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Richard Wadingan Tamayo"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Carla Joy Milanes Cacho"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Ana Lawad Calatan"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Philip Calyaen Tanawe"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Evangelin Api-It David"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/background"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/profile_icon"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/adamina"
+                        android:text="SK Chairperson"
+                        android:textColor="@color/accent"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/adamina"
+                        android:text="Cheralyn Kate Dumapis"
+                        android:textColor="@color/text"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@color/accentbackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SK Kagawad"
+                    android:fontFamily="@font/adamina"
+                    android:layout_gravity="center"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Gwenyth Paycan Pooten"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Valery Binay-an Bugtong"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Yvone Ogas Losnong"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Klaren Mines Binay-an"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Elijah Keith Todyong"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Jeremy Dadis Magmoyao"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        android:background="@color/background">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_icon"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/adamina"
+                            android:text="Irish Paping Tucyapao"
+                            android:textColor="@color/text"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

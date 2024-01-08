@@ -14,11 +14,5 @@ class BarangayOfficials : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_barangay_officials)
 
-        val back: ImageView = findViewById(R.id.back)
-        back.setOnClickListener{
-            val login = Intent(this, navigation::class.java)
-            startActivity(login)
-        }
-
     }
 }

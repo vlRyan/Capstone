@@ -14,11 +14,5 @@ class EmergencyContacts : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emergency_contacts)
 
-        val back: ImageView = findViewById(R.id.back)
-        back.setOnClickListener{
-            val login = Intent(this, navigation::class.java)
-            startActivity(login)
-        }
-
     }
 }

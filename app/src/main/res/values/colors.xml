@@ -13,7 +13,7 @@
     <color name="secondary">#F28699</color>
     <color name="tertiary"> #F9CFD3</color>
     <color name="accent">#F84968</color>
-    <color name="background">#FEFAFB</color>
-    <color name="accentbackground">#F1EFEF</color>
+    <color name="background">#F4EDEE</color>
+    <color name="accentbackground">#FCF5F6</color>
     <color name="text">#0C0506</color>
 </resources>

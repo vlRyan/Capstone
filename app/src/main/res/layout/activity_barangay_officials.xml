@@ -44,12 +44,29 @@
                 android:padding="10dp"
                 android:gravity="center">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/profile_icon"
-                    android:scaleType="centerCrop"
-                    android:layout_marginEnd="10dp"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/punong_barangay_profile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/profile_icon"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/upload_punong_barangay_prof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/change_upload_icon"
+                        android:backgroundTint="#00FFFFFF"
+                        android:visibility="gone"
+                        android:layout_alignEnd="@id/punong_barangay_profile"
+                        android:layout_alignBottom="@id/punong_barangay_profile"/>
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -63,10 +80,10 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/adamina"
                         android:text="Punong Barangay"
-                        android:textColor="@color/accent"
+                        android:textColor="@color/primary"
                         android:textSize="20sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/adamina"
@@ -91,7 +108,7 @@
                     android:text="Sangguniang Barangay Members"
                     android:fontFamily="@font/adamina"
                     android:layout_gravity="center"
-                    android:textColor="@color/accent"
+                    android:textColor="@color/primary"
                     android:textSize="20sp"
                     android:layout_marginBottom="10dp"/>
 
@@ -110,14 +127,30 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/member_profile_1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:id="@+id/upload_member_prof_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignEnd="@id/member_profile_1"
+                                android:layout_alignBottom="@id/member_profile_1"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -137,14 +170,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/member_profile_2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/member_profile_2"
+                                android:layout_alignBottom="@id/member_profile_2"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -173,14 +221,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/member_profile_3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/member_profile_3"
+                                android:layout_alignBottom="@id/member_profile_3"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -200,14 +263,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/member_profile_4"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/member_profile_4"
+                                android:layout_alignBottom="@id/member_profile_4"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -236,14 +314,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/member_profile_5"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/member_profile_5"
+                                android:layout_alignBottom="@id/member_profile_5"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -263,14 +356,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/member_profile_6"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/member_profile_6"
+                                android:layout_alignBottom="@id/member_profile_6"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -299,14 +407,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/member_profile_7"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/member_profile_7"
+                                android:layout_alignBottom="@id/member_profile_7"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -330,12 +453,27 @@
                 android:padding="10dp"
                 android:gravity="center">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/profile_icon"
-                    android:scaleType="centerCrop"
-                    android:layout_marginEnd="10dp"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/sk_chair_profile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/profile_icon"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="10dp"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/change_upload_icon"
+                        android:backgroundTint="#00FFFFFF"
+                        android:layout_alignRight="@id/sk_chair_profile"
+                        android:layout_alignBottom="@id/sk_chair_profile"/>
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -349,10 +487,10 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/adamina"
                         android:text="SK Chairperson"
-                        android:textColor="@color/accent"
+                        android:textColor="@color/primary"
                         android:textSize="20sp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/adamina"
@@ -374,12 +512,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SK Kagawad"
-                    android:fontFamily="@font/adamina"
                     android:layout_gravity="center"
-                    android:textColor="@color/accent"
-                    android:textSize="20sp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/adamina"
+                    android:text="SK Kagawad"
+                    android:textColor="@color/primary"
+                    android:textSize="20sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -396,14 +534,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/sk_member_profile_1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/sk_member_profile_1"
+                                android:layout_alignBottom="@id/sk_member_profile_1"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -423,14 +576,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/sk_member_profile_2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/sk_member_profile_2"
+                                android:layout_alignBottom="@id/sk_member_profile_2"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -459,14 +627,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/sk_member_profile_3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/sk_member_profile_3"
+                                android:layout_alignBottom="@id/sk_member_profile_3"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -486,14 +669,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/sk_member_profile_4"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/sk_member_profile_4"
+                                android:layout_alignBottom="@id/sk_member_profile_4"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -522,14 +720,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/sk_member_profile_5"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/sk_member_profile_5"
+                                android:layout_alignBottom="@id/sk_member_profile_5"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -549,14 +762,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/sk_member_profile_6"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/sk_member_profile_6"
+                                android:layout_alignBottom="@id/sk_member_profile_6"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
@@ -585,14 +813,29 @@
                         android:padding="10dp"
                         android:background="@color/background">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile_icon"
-                            android:scaleType="centerCrop"
-                            android:layout_marginEnd="10dp"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <TextView
+                            <ImageView
+                                android:id="@+id/sk_member_profile_7"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/profile_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="10dp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/change_upload_icon"
+                                android:backgroundTint="#00FFFFFF"
+                                android:layout_alignRight="@id/sk_member_profile_7"
+                                android:layout_alignBottom="@id/sk_member_profile_7"/>
+
+                        </RelativeLayout>
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/adamina"
